@@ -6,21 +6,21 @@ require_relative 'lib/timepiece'
 class Birthday < Sinatra::Base
   enable :sessions
 
+  before do
+    @birthday_instance = Timepiece.instance
+  end
+
   get '/' do
     erb :index
   end
 
   post '/name' do
-    $user_name = params[:user_name]
-    $day = params[:day]
-    $month = params[:month]
-    
-    $birthday = Timepiece.new($day, $month)
-      if $birthday.bday_today?
+    @birthday_instance = Timepiece.create(params[:user_name], params[:day], params[:month])
+      if @birthday_instance.bday_today?
         redirect '/birthday_message'
-      else 
+      else
         redirect '/countdown'
-      end 
+      end
   end
 
   get '/birthday_message' do
@@ -29,7 +29,5 @@ class Birthday < Sinatra::Base
 
   get '/countdown' do
     erb :countdown
-  end 
-
-
+  end
 end

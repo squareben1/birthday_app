@@ -1,8 +1,9 @@
 class Timepiece
-
-  def initialize(day, month)
+  attr_reader :name
+  def initialize(name, day, month)
     @bday = Date.new(0, month.to_i, day.to_i).yday
-  end 
+    @name = name
+  end
 
   def bday_today?
     @bday == Date.today.yday
@@ -12,8 +13,16 @@ class Timepiece
     days = @bday - Date.today.yday
     if days < 0 
       366 - (Date.today.yday - @bday)
-    else 
+    else
       days
-    end 
-  end 
-end 
+    end
+  end
+
+  def self.create(name, day, month)
+    @birthday_instance = Timepiece.new(name, day, month)
+  end
+
+  def self.instance
+    @birthday_instance ||= nil
+  end
+end
