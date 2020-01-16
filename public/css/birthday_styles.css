@@ -1,0 +1,121 @@
+.players {
+  border: 1px solic black;
+}
+
+body {
+  background-color: #F9F8F8;
+  font-family: 'Solway', serif;
+}
+
+header {
+  display: flex;
+  text-align: center;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  padding-top: 20px;
+}
+
+main {
+  font-size: 30px;
+  background-color: #F9F8F8;
+}
+
+#select {
+  size: 20px;
+}
+
+p {
+  font-size: 40px;
+  
+}
+
+.userone, .computer, .winner {
+  border: 0px solid transparent;
+  background-color: #EFCB68;
+  border-radius: 5px;
+  margin: 10px;
+  text-decoration: underline;
+  font-size: 50px;
+}
+
+button, .choice {
+  border: 0px solid transparent;
+  background-color: #EFCB68;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out 0s;
+  height: 100px;
+  width: 200px;
+  margin: 30px;
+  transform: rotate3d(-5, 50, -30, -2deg);
+  box-shadow: rgba(0, 0, 0, 0.15) -13px 9px 27px 10px;
+  font-size: 40px;
+  font-weight: 800;
+  text-align: center;
+  font-family: 'Solway', serif;
+}
+
+input {
+  border: 0px solid transparent;
+  background-color: #EFCB68;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out 0s;
+  height: 50px;
+  width: 150px;
+  margin: 10px;
+  transform: rotate3d(-5, 50, -30, -2deg);
+  box-shadow: rgba(0, 0, 0, 0.15) -13px 9px 27px 10px;
+  font-size: 15px;
+  font-weight: 800;
+  text-align: center;
+  font-family: 'Solway', serif;
+}
+
+button:hover, .choice:hover {
+  cursor: default;
+  transform: rotate(-2deg);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+h1 {
+  border: 0px solid transparent;
+  background-color: #1F363D;
+  border-radius: 10px; 
+  padding: 40px;
+  color: #F9F8F8;
+  transform: rotate3d(-5, 60, -9, 10deg);
+  box-shadow: rgba(0, 0, 0, 0.25) -13px 9px 27px 10px;
+}
+
+h2 {
+  border: 0px solid transparent;
+  background-color: #1F363D;
+  border-radius: 10px; 
+  padding: 40px;
+  color: #F9F8F8;
+  transform: rotate3d(-5, 60, -9, 10deg);
+  box-shadow: rgba(0, 0, 0, 0.25) -13px 9px 27px 10px;
+}
+
+.button-box {
+  font-size: 24px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  height: 500px;
+  width: 100vw;
+}
+
+form {
+  display: flex;
+  justify-items: center;
+}
+
+.choice-form {
+  display: inline-block;
+}
